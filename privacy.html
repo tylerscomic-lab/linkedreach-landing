@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — LinkedReach</title>
+  <meta name="description" content="Privacy Policy for LinkedReach and the SwiftLayer Chrome extension portfolio. All data processing happens locally in your browser." />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --blue: #0a66c2;
+      --blue-light: #1a7fd4;
+      --blue-dim: rgba(10,102,194,0.15);
+      --navy: #0d1117;
+      --navy-2: #161b22;
+      --navy-3: #21262d;
+      --border: rgba(255,255,255,0.08);
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --white: #ffffff;
+      --radius: 12px;
+      --radius-lg: 20px;
+      --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    html { scroll-behavior: smooth; font-size: 16px; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--navy);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: var(--blue-light); text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { color: var(--white); }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13,17,23,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.125rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      background: var(--blue);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      flex-shrink: 0;
+    }
+
+    .back-link {
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--text); }
+
+    /* ── Legal content ── */
+    .legal {
+      padding: 72px 0 96px;
+    }
+
+    .legal .eyebrow {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--blue-light);
+      margin-bottom: 14px;
+    }
+
+    .legal h1 {
+      font-size: clamp(1.9rem, 4vw, 2.75rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .legal .effective-date {
+      font-size: 0.9375rem;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .legal-body {
+      max-width: 760px;
+    }
+
+    .legal-body h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--white);
+      margin: 40px 0 14px;
+      letter-spacing: -0.01em;
+    }
+
+    .legal-body h2:first-child { margin-top: 0; }
+
+    .legal-body p {
+      font-size: 0.9688rem;
+      color: var(--text);
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    .legal-body ul {
+      margin: 0 0 16px 20px;
+      color: var(--text);
+    }
+
+    .legal-body li {
+      font-size: 0.9688rem;
+      line-height: 1.75;
+      margin-bottom: 8px;
+    }
+
+    .legal-body strong { color: var(--white); }
+
+    .legal-card {
+      background: var(--navy-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      margin-top: 40px;
+    }
+
+    .legal-card p { margin-bottom: 8px; }
+    .legal-card p:last-child { margin-bottom: 0; }
+
+    .badge-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--blue-dim);
+      border: 1px solid rgba(10,102,194,0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      color: #58a6ff;
+      width: fit-content;
+      margin-bottom: 32px;
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy-2);
+      border-top: 1px solid var(--border);
+      padding: 40px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .footer-links a {
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color var(--transition);
+    }
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-copy {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    @media (max-width: 640px) {
+      .footer-inner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Nav ── -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon">⚡</div>
+          LinkedReach
+        </a>
+        <a href="index.html" class="back-link">← Back to home</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Legal content ── -->
+  <section class="legal">
+    <div class="container">
+      <div class="legal-body">
+        <div class="eyebrow">Legal</div>
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective date: July 15, 2026</p>
+
+        <div class="badge-row">
+          <span>🔒</span>
+          No servers. No tracking. Your data stays on your device.
+        </div>
+
+        <h2>1. Summary</h2>
+        <p>SwiftLayer builds Chrome extensions — including LinkedReach, CraigsAlert, EtsyAlert, DepopAlert, GrailAlert, ScamDetect Pro, HostCalc Pro, YelpSort Pro, LocalDen, and PropGrade — that are designed to run entirely inside your browser. We do not operate a backend server that collects, stores, or processes your browsing activity, and we do not sell or share personal data, because we do not collect it in the first place.</p>
+
+        <h2>2. What data the extensions process</h2>
+        <p>Each extension reads data only from the specific web page you are actively viewing (for example, a LinkedIn profile, a Craigslist listing, or an Airbnb listing) in order to perform its core function — generating a message, checking a price, sorting reviews, tracking a lead, and so on. This processing happens <strong>locally, in your browser</strong>. Nothing you browse is transmitted to SwiftLayer servers, because SwiftLayer does not operate a server that any extension talks to.</p>
+        <p>Where an extension calls a third-party API on your behalf (for example, LinkedReach's use of the Groq AI API to generate a message), that request is sent directly from your browser to the third-party provider using your own API key. SwiftLayer never sees or stores the content of that request.</p>
+
+        <h2>3. Local storage and license keys</h2>
+        <p>Settings, saved alerts, message history, and your <strong>Pro license key</strong> are stored using Chrome's local extension storage (`chrome.storage.local`) directly on your device. This data is not synced to any SwiftLayer server and is removed if you uninstall the extension or clear your browser's extension storage.</p>
+
+        <h2>4. Payment data</h2>
+        <p>If you purchase a Pro subscription, checkout and billing are handled entirely by <strong>Lemon Squeezy</strong>, our payment processor and merchant of record. SwiftLayer does not collect, see, or store your payment card details. Lemon Squeezy processes your email address and payment information under its own privacy policy in order to complete the transaction, issue receipts, and manage your subscription.</p>
+
+        <h2>5. What we do not do</h2>
+        <ul>
+          <li>We do not collect analytics or telemetry from the extensions.</li>
+          <li>We do not sell, rent, or share personal data with third parties.</li>
+          <li>We do not build browsing profiles or track you across sites.</li>
+          <li>We do not have access to the local storage contents of your browser.</li>
+        </ul>
+
+        <h2>6. Permissions</h2>
+        <p>Each extension requests only the browser permissions necessary for it to function on its target site (for example, `activeTab`, `storage`, `alarms`, and `notifications`). Permissions are scoped to the relevant domain(s) and are never used to read or transmit data outside the extension's stated purpose.</p>
+
+        <h2>7. Children's privacy</h2>
+        <p>Our Products are not directed to children under 13, and we do not knowingly collect personal data from children.</p>
+
+        <h2>8. Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time. Material changes will be reflected by an updated effective date on this page.</p>
+
+        <h2>9. Contact</h2>
+        <div class="legal-card">
+          <p><strong>SwiftLayer</strong></p>
+          <p>Brooklyn, NY, USA</p>
+          <p>Email: <a href="mailto:tylerscomic@gmail.com">tylerscomic@gmail.com</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="index.html" class="logo">
+          <div class="logo-icon" style="width:28px;height:28px;font-size:14px;">⚡</div>
+          LinkedReach
+        </a>
+        <div class="footer-links">
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+          <a href="refund.html">Refund Policy</a>
+          <a href="products.html">Products</a>
+        </div>
+        <p class="footer-copy">© 2026 SwiftLayer</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
